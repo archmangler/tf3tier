@@ -1,0 +1,6 @@
+.terraform/
+*.tfvars
+#variables.tf
+*.plan
+*.tfstate
+terraform.tfstate*
