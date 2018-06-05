@@ -23,7 +23,7 @@ EOF
 #Allow mysql db to be available on all interfaces
 sed -i 's/127\.0\.0\.1/0\.0\.0\.0/g' /etc/mysql/mysql.conf.d/mysqld.cnf
 #Allow network connections to db
-mysql -uroot -pJ4BB3rW0cky## -e 'USE mysql; UPDATE `user` SET `Host`="%" WHERE `User`="root" AND `Host`="localhost"; DELETE FROM `user` WHERE `Host` != "%" AND `User`="root"; FLUSH PRIVILEGES; CREATE database crud;'
+mysql -uroot -pJ4BB3rW0cky## -e 'USE mysql; UPDATE `user` SET `Host`="%" WHERE `User`="root" AND `Host`="localhost"; DELETE FROM `user` WHERE `Host` != "%" AND `User`="root"; FLUSH PRIVILEGES; CREATE database crud; use crud; CREATE TABLE quotes ( id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, content VARCHAR(30) NOT NULL)'
 
 #restart mysql to effect network listen changes
 systemctl restart mysql
