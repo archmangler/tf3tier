@@ -18,5 +18,6 @@ Usage:
 - terraform init
 - terraform get				(to get the vpc module)
 - terraform plan -out web.plan
+- Run unit test: perl test.pl web.plan	(only one PoC unit test so far)
 - terraform apply web.plan
 - paste the resulting elb fqdn into a browser
