@@ -16,6 +16,7 @@ Usage:
 
 - add your keys to variables.tf
 - terraform init
+- terraform get				(to get the vpc module)
 - terraform plan -out web.plan
 - terraform apply web.plan
 - paste the resulting elb fqdn into a browser
